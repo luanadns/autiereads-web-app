@@ -1,3 +1,4 @@
 # autiereads-web-app
 This is an MVP project created by me for a Full Stack Development Course.
-![data schema](https://user-images.githubusercontent.com/113172663/214549306-f89fe092-3a5d-4875-ae22-90a4fc9b4b37.png)
+<img width="749" alt="dataschema" src="https://user-images.githubusercontent.com/113172663/214549925-93391b1b-82ff-4347-a365-ea808ab1a71a.png">
+
