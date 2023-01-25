@@ -1,10 +1,9 @@
 # autiereads-web-app
 This is an MVP project created by me for a Full Stack Development Course.
 
-### App Scketch
+### App Sketch
 
-<img width="442" alt="autiereads sketch" src="https://user-images.githubusercontent.com/113172663/214556313-a26cd727-3e50-4bb2-807b-a5c475dac666.png">
-
+<img width="397" alt="autiereads sketch" src="https://user-images.githubusercontent.com/113172663/214556894-8a26becf-dda8-473a-b427-19cab22018c2.png">
 
 ### Data Schema
 
