@@ -12,5 +12,11 @@ This is an MVP project created by me for a Full Stack Development Course.
 ## Setup
 ----------------------------
 
+Clone the repository.
+On your computer terminal, `cd` into the client folder of the project.
+Run the command line `yarn start`.
 
+## Notes
+
+_This is a student project that was created at [CodeOp](http://CodeOp.tech), a full stack development bootcamp in Barcelona._
 
