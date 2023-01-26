@@ -9,7 +9,7 @@ This is an MVP project created by me for a Full Stack Development Course.
 
 <img width="739" alt="dataschema" src="https://user-images.githubusercontent.com/113172663/214558136-b66771ee-06ba-4d56-bffa-37db7d8fdb93.png">
 
-##Setup
+## Setup
 ----------------------------
 
 
