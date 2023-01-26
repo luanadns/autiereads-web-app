@@ -20,8 +20,3 @@ This is an MVP project created by me for a Full Stack Development Course.
 
 _This is a student project that was created at [CodeOp](http://CodeOp.tech), a full stack development bootcamp in Barcelona._
 
-
-
-
-
-
