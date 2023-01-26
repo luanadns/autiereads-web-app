@@ -3,14 +3,14 @@ This is an MVP project created by me for a Full Stack Development Course.
 
 ## App Sketch
 
-<img width="772" alt="autiereads sketch" src="https://user-images.githubusercontent.com/113172663/214557903-98436867-4d91-4d61-856d-de9023866bf5.png">
+<img width="519" alt="autiereads 1" src="https://user-images.githubusercontent.com/113172663/214927009-5a3b17b0-db5b-4c1f-86de-9b167f2c923c.png">
+<img width="613" alt="autiereads 2" src="https://user-images.githubusercontent.com/113172663/214927018-afdbd23f-9b47-49fa-b268-f03dd8ecd25f.png">
 
 ## Data Schema
 
 <img width="739" alt="dataschema" src="https://user-images.githubusercontent.com/113172663/214558136-b66771ee-06ba-4d56-bffa-37db7d8fdb93.png">
 
 ## Setup
-----------------------------
 
 * Clone the repository.
 * On your computer terminal, `cd` into the *Client* folder of the project.
