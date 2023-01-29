@@ -10,15 +10,25 @@ const BooksListPage = () => {
       const response = await fetch(url, {
         method: 'GET'
       })
+      console.log(response)
       const books = await response.json()
 
-      setBooks(books)
+      setBooks(books.map((book) => {
+        return {...book, isSelected: false}
+      }))
     }
 
     fetchBooks()
   }, [])
-  
-  return <div><BookList books={books} /></div>
+
+  function selectBook(id) {
+    setBooks(booksArray => booksArray.map((book) => {
+      return book.id === id ? {...book, isSelected: true} 
+      : book
+    }))
+  }
+
+  return <div><BookList books={books} clickHandler={selectBook}/></div>
 }
 
 export default BooksListPage
