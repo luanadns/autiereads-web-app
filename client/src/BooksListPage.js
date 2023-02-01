@@ -28,7 +28,12 @@ const BooksListPage = () => {
     }))
   }
 
-  return <div><BookList books={books} clickHandler={selectBook}/></div>
+  return (
+  <div>
+    <h1>AutieReads</h1>
+    <BookList books={books} clickHandler={selectBook}/>
+  </div>
+  )
 }
 
 export default BooksListPage

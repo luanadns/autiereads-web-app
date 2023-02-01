@@ -1,3 +1,14 @@
-.selected {
-    background-color: red;
+ul {
+    list-style-type: none;
+    font-family: georgia;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+button:hover {
+    color:rosybrown;
+    font-weight: bolder;
 }

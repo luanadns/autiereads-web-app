@@ -1,12 +1,22 @@
 import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
 import BooksListPage from "./BooksListPage.js";
+import BooksList from './components/BooksList';
+import BooksListItem from './components/BooksListItem';
 
 function App() {
   return (
-    <div className="App">
-      <h1>AutieReads</h1>
-      <BooksListPage />
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<BooksListPage />} />
+      <Route path="/books" element={<BooksList />} />
+      <Route path="/books/:id" element={<BooksListItem />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 

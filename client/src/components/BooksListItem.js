@@ -1,8 +1,17 @@
 import React from "react";
-import BookCard from "./BookCard";
 
-export default function BooksListItem({ title, author, isSelected, selectBook, id}) {
+export default function BooksListItem({ title, author, description, isSelected, selectBook, id}) {
   return (
-    <li><button className={isSelected ? "selected" : "not-selected"} onClick={() => selectBook(id)}>{title}, {author}</button></li>
+    <li>
+      <button className={isSelected ? "selected" : "not-selected"} 
+              onClick={() => selectBook(id)}>{title}, {author}
+      </button>
+
+      {isSelected && (
+        <div ClassName="description">
+        {description}
+        </div>
+      )}
+    </li>
   )
 }
