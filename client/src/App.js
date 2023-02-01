@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import BooksListPage from "./BooksListPage.js";
 import BooksList from './components/BooksList';
-import BooksListItem from './components/BooksListItem';
+import BookDetailsCard from './components/BookDetailsCard';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
     <Routes>
       <Route path="/" element={<BooksListPage />} />
       <Route path="/books" element={<BooksList />} />
-      <Route path="/books/:id" element={<BooksListItem />} />
+      <Route path="/books/:id" element={<BookDetailsCard />} />
     </Routes>
     </BrowserRouter>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import BookDetailsCard from "./BookDetailsCard";
 
 export default function BooksListItem({ title, author, description, isSelected, selectBook, id}) {
   return (
@@ -7,11 +8,7 @@ export default function BooksListItem({ title, author, description, isSelected, 
               onClick={() => selectBook(id)}>{title}, {author}
       </button>
 
-      {isSelected && (
-        <div ClassName="description">
-        {description}
-        </div>
-      )}
+      {isSelected && (<BookDetailsCard description={description}/>)}
     </li>
   )
 }
