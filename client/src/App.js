@@ -5,16 +5,14 @@ import {
   Route,
 } from 'react-router-dom';
 import BooksListPage from "./BooksListPage.js";
-import BooksList from './components/BooksList';
-import BookDetailsCard from './components/BookDetailsCard';
+import BookDetailPage from './BookDetailPage';
 
 function App() {
   return (
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<BooksListPage />} />
-      <Route path="/books" element={<BooksList />} />
-      <Route path="/books/:id" element={<BookDetailsCard />} />
+      <Route path="/books/:id" element={<BookDetailPage />} />
     </Routes>
     </BrowserRouter>
   );
