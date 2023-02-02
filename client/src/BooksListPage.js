@@ -1,4 +1,6 @@
+import './BooksListPage.css';
 import {useEffect, useState} from 'react'
+import BooksSearchBar from './components/BooksSearchBar'
 import BookList from './components/BooksList'
 
 const BooksListPage = () => {
@@ -31,6 +33,7 @@ const BooksListPage = () => {
   return (
   <div>
     <h1>AutieReads</h1>
+    <BooksSearchBar books={books}/>
     <BookList books={books} clickHandler={selectBook}/>
   </div>
   )

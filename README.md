@@ -13,8 +13,7 @@ This is an MVP project created by me for a Full Stack Development Course.
 ## Setup
 
 * Clone the repository.
-* On your computer terminal, `cd` into the *Client* folder of the project.
-* Run the command `yarn start`.
+* On your computer terminal, inside the project folder, run the command `yarn start`. Then `cd` into the *client* folder and from there, run the same command `yarn start`.
 
 ## Notes
 
