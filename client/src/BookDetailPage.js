@@ -1,5 +1,9 @@
+import BooksHero from "./components/BooksHero"
+
 export default function BookDetailPage () {
-    return (
-        <div>Hola</div>
-    )
+  return (
+    <div>
+      <BooksHero title="Book detail" />
+    </div>
+  )
 }

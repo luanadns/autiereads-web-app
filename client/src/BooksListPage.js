@@ -1,5 +1,6 @@
 import './BooksListPage.css';
 import {useEffect, useState} from 'react'
+import BooksHero from './components/BooksHero'
 import BooksSearchBar from './components/BooksSearchBar'
 import BooksList from './components/BooksList'
 
@@ -32,8 +33,9 @@ const BooksListPage = () => {
 
   return (
   <div>
-    <h1>AutieReads</h1>
-    <BooksSearchBar books={books}/>
+    <BooksHero title="AutieReads">
+      <BooksSearchBar books={books}/>
+    </BooksHero>
     <BooksList books={books} clickHandler={selectBook}/>
   </div>
   )
