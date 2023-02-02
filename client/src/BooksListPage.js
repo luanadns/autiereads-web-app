@@ -1,7 +1,7 @@
 import './BooksListPage.css';
 import {useEffect, useState} from 'react'
 import BooksSearchBar from './components/BooksSearchBar'
-import BookList from './components/BooksList'
+import BooksList from './components/BooksList'
 
 const BooksListPage = () => {
   const [books, setBooks] = useState([])
@@ -34,7 +34,7 @@ const BooksListPage = () => {
   <div>
     <h1>AutieReads</h1>
     <BooksSearchBar books={books}/>
-    <BookList books={books} clickHandler={selectBook}/>
+    <BooksList books={books} clickHandler={selectBook}/>
   </div>
   )
 }

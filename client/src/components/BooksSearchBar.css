@@ -1,3 +1,12 @@
+h1 {
+  color: #7c795d; 
+  font-family: 'Trocchi', serif; 
+  font-size: 45px; 
+  font-weight: bold; 
+  line-height: 48px; 
+  margin: 0; 
+}
+
 form {
     color: #555;
     display: flex;
