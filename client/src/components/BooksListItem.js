@@ -1,4 +1,4 @@
-import './BookListItem.css';
+import './BooksListItem.css';
 import React from "react";
 import BookDetailsCard from "./BookDetailsCard";
 
