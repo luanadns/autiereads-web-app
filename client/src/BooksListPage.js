@@ -1,4 +1,3 @@
-import './BooksListPage.css';
 import {useEffect, useState} from 'react'
 import BooksHero from './components/BooksHero'
 import BooksSearchBar from './components/BooksSearchBar'
@@ -15,28 +14,18 @@ const BooksListPage = () => {
       })
       console.log(response)
       const books = await response.json()
-
-      setBooks(books.map((book) => {
-        return {...book, isSelected: false}
-      }))
+      setBooks(books)
     }
 
     fetchBooks()
   }, [])
 
-  function selectBook(id) {
-    setBooks(booksArray => booksArray.map((book) => {
-      return book.id === id ? {...book, isSelected: true} 
-      : book
-    }))
-  }
-
   return (
   <div>
     <BooksHero title="AutieReads">
-      <BooksSearchBar books={books}/>
+    <BooksSearchBar books={books}/>
     </BooksHero>
-    <BooksList books={books} clickHandler={selectBook}/>
+    <BooksList books={books}/>
   </div>
   )
 }

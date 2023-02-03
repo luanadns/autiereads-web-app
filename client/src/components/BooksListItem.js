@@ -1,15 +1,10 @@
 import './BooksListItem.css';
-import React from "react";
-import BookDetailsCard from "./BookDetailsCard";
+import {Link} from 'react-router-dom';
 
-export default function BooksListItem({ title, author, description, isSelected, selectBook, id}) {
+export default function BooksListItem({ title, author, id}) {
   return (
     <li>
-      <button className={isSelected ? "selected" : "not-selected"} 
-              onClick={() => selectBook(id)}>{title}, {author}
-      </button>
-
-      {isSelected && (<BookDetailsCard description={description}/>)}
+      <Link to={`/books/${id}`}><span className="title">{title}</span> by {author}</Link>
     </li>
   )
 }

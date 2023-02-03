@@ -1,10 +1,7 @@
-button {
-    all: unset;
+Link {
     cursor: pointer;
-    font-weight: bold;
 }
 
-.not-selected:hover {
-    color:rosybrown;
-    font-weight: bolder;
+.title {
+    font-style: oblique;
 }

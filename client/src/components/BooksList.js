@@ -1,8 +1,7 @@
-import React from "react";
 import "./BooksList.css";
 import BooksListItem from "./BooksListItem";
 
-export default function BooksList({ books, clickHandler }) {
+export default function BooksList({ books }) {
   return (
     <ul>
       {books.map((book, index) => {
@@ -13,8 +12,6 @@ export default function BooksList({ books, clickHandler }) {
             title={book.title}
             author={book.author}
             description={book.description}
-            isSelected={book.isSelected}
-            selectBook={clickHandler}
           />
         )
       })}
