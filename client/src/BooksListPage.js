@@ -2,11 +2,10 @@ import {useEffect, useState} from 'react'
 import BooksHero from './components/BooksHero'
 import BooksSearchBar from './components/BooksSearchBar'
 import BooksList from './components/BooksList'
-import FilteredBooksList from './components/FilteredBooksList'
 
 const BooksListPage = () => {
   const [books, setBooks] = useState([])
-  const [filteredBooks, setFilteredBooks] = useState(books)
+  const [query, setQuery] = useState('')
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -23,27 +22,21 @@ const BooksListPage = () => {
   }, [])
 
   const handleChange = (event) => {
-    // Access input value
     const query = event.target.value;
-    // Create copy of books list
-    let updatedBooksList = [...books];
-    // Include all elements which includes the search query
-    updatedBooksList = updatedBooksList.filter((input) => {
-      return input.toLowerCase().indexOf(query.toLowerCase()) !== -1;
-    });
-    // Trigger render with updated values
-    setFilteredBooks(updatedBooksList);
+    setQuery(query);
   };
+
+  const filteredBooks = books.filter((book) => {
+    return book.title.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+  });
 
   return (
   <div>
     <BooksHero title="AutieReads">
-    <BooksSearchBar books={books} onChange={handleChange}/>
+      <BooksSearchBar onChange={handleChange}/>
     </BooksHero>
-    {filteredBooks ? 
-    <FilteredBooksList filteredBooks={filteredBooks}/> 
-    : 
-    <BooksList books={books}/>}
+    
+    <BooksList books={filteredBooks} />
   </div>
   )
 }
