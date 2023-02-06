@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import BooksHero from './components/BooksHero'
 import BooksSearchBar from './components/BooksSearchBar'
 import BooksList from './components/BooksList'
+import FilteredBooksList from './components/FilteredBooksList';
 
 const BooksListPage = () => {
   const [books, setBooks] = useState([])
@@ -35,8 +36,9 @@ const BooksListPage = () => {
     <BooksHero title="AutieReads">
       <BooksSearchBar onChange={handleChange}/>
     </BooksHero>
-    
-    <BooksList books={filteredBooks} />
+    {filteredBooks? <FilteredBooksList filteredBooks={filteredBooks} />
+    :
+    <BooksList books={books} />}
   </div>
   )
 }
