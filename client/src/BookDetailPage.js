@@ -1,3 +1,4 @@
+import './BookDetailPage.css';
 import {useState, useEffect} from "react"
 import { useParams } from "react-router-dom"
 import BooksHero from "./components/BooksHero"
@@ -28,8 +29,11 @@ export default function BookDetailPage() {
     <div>
       <BooksHero title="AutieReads"/>
     </div>
-    {book ? <div><h2>{book.title} by {book.author}</h2> 
-    <p>{book.description}</p></div>
+    {book ? 
+    <div className="bookDetail-wrapper">
+      <h3>{book.title} by {book.author}</h3>
+      <p>{book.description}</p>
+      </div>
     : null}
     </>
   )
