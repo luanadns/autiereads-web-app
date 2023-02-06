@@ -3,8 +3,8 @@ This is an MVP project created by me for a Full Stack Development Course.
 
 ## App Sketch
 
-<img width="519" alt="autiereads 1" src="https://user-images.githubusercontent.com/113172663/214927009-5a3b17b0-db5b-4c1f-86de-9b167f2c923c.png">
-<img width="613" alt="autiereads 2" src="https://user-images.githubusercontent.com/113172663/214927018-afdbd23f-9b47-49fa-b268-f03dd8ecd25f.png">
+<img width="519" alt="autiereads 1" src="https://iili.io/H1bJr2p.png">
+<img width="613" alt="autiereads 2" src="https://iili.io/H1bJb44.png">
 
 ## Data Schema
 
