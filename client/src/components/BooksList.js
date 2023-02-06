@@ -12,6 +12,7 @@ export default function BooksList({ books }) {
             title={book.title}
             author={book.author}
             description={book.description}
+            image={book.image}
           />
         )
       })}
