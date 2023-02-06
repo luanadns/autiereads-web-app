@@ -8,7 +8,7 @@ This is an MVP project created by me for a Full Stack Development Course.
 
 ## Data Schema
 
-<img width="739" alt="dataschema" src="https://user-images.githubusercontent.com/113172663/214558136-b66771ee-06ba-4d56-bffa-37db7d8fdb93.png">
+<img width="739" alt="dataschema" src="https://iili.io/H1Ds47j.png">
 
 ## Setup
 
