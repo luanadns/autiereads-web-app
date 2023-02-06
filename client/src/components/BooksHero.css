@@ -9,15 +9,16 @@
   background-repeat: no-repeat; 
   background-size: cover;
   text-align: center;
-  height: 256px;
+  height: 300px;
   width: 100%;
 }
 
 .BooksHero-title {
   color: #7c795d; 
-  font-family: 'Trocchi', serif;
-  font-size: 45px; 
-  font-weight: bold; 
+  font-family: 'Trocchi', serif; 
+  font-size: 60px; 
+  font-weight: bolder; 
   line-height: 48px; 
-  margin: 16px 0;
+  margin: 0; 
+  padding-bottom: 50px;
 }
