@@ -3,7 +3,7 @@ This is an MVP project created by me for a Full Stack Development Course.
 
 ## App Sketch
 
-<img width="519" alt="autiereads 1" src="https://iili.io/H1bJr2p.png">
+<img width="613" alt="autiereads 1" src="https://iili.io/H1bJr2p.png">
 <img width="613" alt="autiereads 2" src="https://iili.io/H1bJb44.png">
 
 ## Data Schema
