@@ -1,10 +1,9 @@
 # autiereads-web-app
-This is an MVP project created by me for a Full Stack Development Course.
+This is an MVP project created by me for a Full Stack Development Course. It's meant to be a book directory specialized in books and articles about autism from a neurodiversity affirming perspective.
 
 ## App Sketch
 
-<img width="613" alt="autiereads 1" src="https://iili.io/H1bJr2p.png">
-<img width="613" alt="autiereads 2" src="https://iili.io/H1bJb44.png">
+<img width="613" alt="autiereads 1" src="https://iili.io/HEukE3F.png">
 
 ## Data Schema
 
