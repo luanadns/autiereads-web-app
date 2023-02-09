@@ -7,7 +7,7 @@ This is an MVP project created by me for a Full Stack Development Course. It's m
 
 ## Data Schema
 
-<img width="500" alt="dataschema" src="https://iili.io/H1Ds47j.png">
+<img width="390" alt="dataschema" src="https://iili.io/H1Ds47j.png">
 
 ## Setup
 
