@@ -23,7 +23,11 @@ export default function BookDetailPage() {
 
 		fetchBooks();
 	}, []);
-
+	//to make the comment box we are gonna take the info from the front end
+	//create a new table for the comments
+	//use foreign key to connect with the books table
+	//create new end points -get comments by book id -post if I do the form to add more comments
+	//grab the info with fetch for the front end **give a try with axios
 	return (
 		<>
 			<div>
