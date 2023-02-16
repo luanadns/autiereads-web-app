@@ -34,11 +34,11 @@ export default function BookDetailPage() {
 			</div>
 			{book ? (
 				<div className="bookDetail-wrapper">
-					<h3>
+					<h3 className="text">
 						{book.title} by {book.author}
 					</h3>
-					<p>{book.description}</p>
-					<img src={book.image}></img>
+					<p className="description">{book.description}</p>
+					<img className="image" src={book.image} alt=""></img>
 				</div>
 			) : null}
 		</>

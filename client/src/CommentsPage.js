@@ -26,15 +26,28 @@ export default function Comments(props) {
 	return (
 		<div>
 			<div>
-				{comments.map((comment, id) => {
-					<div key={id}>
-						<h3> {comment.userName} </h3>;
-					</div>;
-				})}
+				<h1> Make a comment: </h1>
 			</div>
-			<div>
-				<h1> I work </h1>
-			</div>
+			<form>
+				<div>
+					<label>Name: </label>
+					<input name="name" placeholder="Your name" />
+				</div>
+				<div>
+					<label>Comment: </label>
+					<textarea name="comment" placeholder="Comment here" />
+				</div>
+				<div>
+					{comments.map((comment, id) => {
+						return (
+							<Fragment key={id}>
+								<h3> {comment.userName} </h3>
+								<h3> {comment.commenText}</h3>
+							</Fragment>
+						);
+					})}
+				</div>
+			</form>
 		</div>
 	);
 }
