@@ -7,5 +7,19 @@
     padding: 80px;
     position: relative;
     text-align: center;
+    display: flex;
 }
 
+.book-detail {
+    display: block;
+}
+
+.description {
+    margin: 30px;
+    text-align: left;
+}
+
+.comment-form {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 80px;
+}

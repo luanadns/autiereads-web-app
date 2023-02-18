@@ -1,0 +1,56 @@
+.comments-container{
+    color:#4c4a37; 
+    text-align: left;
+}
+
+.btn-submit{
+    border: 0;
+    color: #4c4a37;
+    background: linear-gradient(to bottom right,rgb(133, 252, 133), rgb(131, 131, 248), rgb(252, 133, 252));
+    font-weight: bold;
+    padding: 15px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input {
+    outline: none;
+    margin: 0 auto;
+    padding: 10px 15px;
+    border-radius: 1px;
+    margin-bottom: 3px;
+    border-image: linear-gradient(rgb(133, 252, 133), rgb(131, 131, 248), rgb(252, 133, 252)) 1;
+    border-image-slice: 1;
+}
+
+.textarea {
+    outline: none;
+    padding: 20px 20px;
+    border-radius: 1px;
+    margin-bottom: 3px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(rgb(133, 252, 133), rgb(131, 131, 248), rgb(252, 133, 252)) 1;
+    border-image-slice: 1;
+    display: inline-block;
+    vertical-align: middle;
+    resize: none;
+}
+
+.input:focus, 
+.textarea:focus {
+    border: 3px solid ;
+    border-image: linear-gradient(to right,#4c4a37,#7a7759,#c0bb8b);
+    border-color: linear-gradient(to right,#4c4a37,#7a7759,#c0bb8b);
+    border-image-slice: 1;
+}
+
+.name-label, 
+.comment-label {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+    vertical-align: middle;
+}
