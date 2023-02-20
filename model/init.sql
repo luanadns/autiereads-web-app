@@ -6,7 +6,7 @@ CREATE TABLE books (
   title VARCHAR(100) NOT NULL,
   author VARCHAR(40) NOT NULL,
   description MEDIUMTEXT NOT NULL,
-  image VARCHAR(300) NOT NULL
+  image VARCHAR(300) NOT NULL /* MEDIUMBLOB was sending the image link as an array and after we needed to covert into a string */
 );
 
 CREATE TABLE comments (

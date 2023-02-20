@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect } from "react";
 import "./CommentsPage.css";
 //to make the comment box we are gonna take the info from the front end
 //create a new table for the comments
@@ -10,30 +10,31 @@ import "./CommentsPage.css";
 
 export default function Comments(props) {
 	const [comments, setComments] = useState([]);
-	const [comment, setComment] = useState("");
+
+	const id = props.book.id;
+
+	const fetchComments = async bookId => {
+		const url = `http://${window.location.hostname}:5000/comments/${bookId}`;
+		const response = await fetch(url, {
+			method: "GET"
+		});
+		const comments = await response.json();
+		setComments(comments);
+	};
 
 	useEffect(() => {
-		const fetchComments = async () => {
-			const id = props.book.id;
-			const url = `http://localhost:5000/comments/${id}`;
-			const response = await fetch(url, {
-				method: "GET"
-			});
-			console.log(response);
-			const comments = await response.json();
-			setComments(comments);
-		};
-		fetchComments();
-	}, [props.book]);
+		fetchComments(id);
+	}, [id]);
 
 	const handleSubmit = async event => {
 		event.preventDefault();
+
 		const form = event.target;
 		const userName = form.name.value;
 		const commentText = form.comment.value;
-		const book_id = props.book.id;
+
 		try {
-			const response = await fetch("/comments", {
+			await fetch("/comments", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json"
@@ -41,58 +42,53 @@ export default function Comments(props) {
 				body: JSON.stringify({
 					name: userName,
 					comment: commentText,
-					id: book_id
+					id
 				})
 			});
-			if (response.ok) {
-				const newComment = await response.json();
-				setComments([...comments, newComment]);
-			} else {
-				throw new Error(`Failed to add comment: ${response.status} ${response.statusText}`);
-			}
+
+			fetchComments(id);
 		} catch (error) {
 			console.error(error);
+		} finally {
+			form.reset();
 		}
 	};
 
-	const handleCommentChange = event => {
-		setComment(event.target.value);
-	};
-
 	return (
-		<div className="comments-container">
-			<div>
-				<h1> Make a comment: </h1>
-			</div>
-			<form onSubmit={handleSubmit}>
-				<div>
-					<label className="name-label">Name: </label>
-					<input name="name" placeholder="Your name" className="input" />
-				</div>
-				<div>
-					<label className="comment-label">Comment: </label>
-					<textarea
-						name="comment"
-						placeholder="Comment here"
-						className="textarea"
-						value={comment}
-						onChange={handleCommentChange}
-					/>
-				</div>
-				<button type="submit" className="btn-submit">
-					Submit
-				</button>
-			</form>
-			<div>
+		<>
+			<div className="card">
 				{comments.map((comment, id) => {
 					return (
-						<Fragment key={id}>
-							<h3> {comment.userName} </h3>
-							<h3> {comment.commenText}</h3>
-						</Fragment>
+						<div key={id} className="card-user-comment">
+							<p>{`"${comment.commenText}"`}</p>
+							<h2> {comment.userName} </h2>
+						</div>
 					);
 				})}
 			</div>
-		</div>
+
+			<div className="comments-container">
+				<div>
+					<h1> Make a comment: </h1>
+				</div>
+				<form onSubmit={handleSubmit} className="form">
+					<div className="input-container">
+						<div>
+							<label className="name-label">Name: </label>
+							<input name="name" placeholder="Your name" className="input" />
+						</div>
+						<div>
+							<label className="comment-label">Comment: </label>
+							<textarea name="comment" placeholder="Comment here" className="textarea" />
+						</div>
+					</div>
+					<div className="button">
+						<button type="submit" className="btn-submit">
+							Submit
+						</button>
+					</div>
+				</form>
+			</div>
+		</>
 	);
 }

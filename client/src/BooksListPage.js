@@ -10,7 +10,7 @@ const BooksListPage = () => {
 
 	useEffect(() => {
 		const fetchBooks = async () => {
-			const url = "http://localhost:5000/books";
+			const url = "http://" + window.location.hostname + ":5000/books";
 			const response = await fetch(url, {
 				method: "GET"
 			});

@@ -12,3 +12,12 @@ code {
     monospace;
 }
 
+
+li {
+    margin-bottom: 20px;
+    font-size: large;
+}
+li::before {
+    content: '- ';
+}
+

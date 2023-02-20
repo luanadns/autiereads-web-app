@@ -8,6 +8,13 @@
     position: relative;
     text-align: center;
     display: flex;
+    padding-bottom: 10px;
+}
+
+.image {
+    object-fit: contain;
+    object-position: top;
+    padding-top: 88px;
 }
 
 .book-detail {
